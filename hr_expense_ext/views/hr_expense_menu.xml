@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_exp_provider" name="provider" parent="hr_expense.menu_hr_expense_my_expenses" sequence="3" action="account.res_partner_action_supplier" />
+  
+
+</odoo>

@@ -6,3 +6,5 @@ class HrExpenseSheet(models.Model):
 
     budget_expen = fields.Monetary(string="Budget", currency_field="budg_currency_id")
     budg_currency_id = fields.Many2one('res.currency',string='Budget Currency')
+
+
