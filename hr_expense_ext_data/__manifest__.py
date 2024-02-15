@@ -18,8 +18,6 @@ Module for data to Hr Expense
 
     # always loaded
     "data": [
-         "data/expenses_data.xml",
-         "data/hr_expense_menu.xml"
     ],
     'license':"LGPL-3",
 }

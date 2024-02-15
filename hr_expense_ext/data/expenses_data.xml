@@ -5,15 +5,15 @@
             <field name="name">Viáticos</field>
         </record>
         <record id="exp_viat_hospedaje" model="product.category">
-            <field name="parent_id" ref="exp_viat"/>
+            <field name="parent_id" ref="hr_expense_ext.exp_viat"/>
             <field name="name">Hospedaje</field>
         </record>
         <record id="exp_viat_peaje" model="product.category">
-            <field name="parent_id" ref="exp_viat"/>
+            <field name="parent_id" ref="hr_expense_ext.exp_viat"/>
             <field name="name">Peaje</field>
         </record>
         <record id="exp_viat_alimentacion" model="product.category">
-            <field name="parent_id" ref="exp_viat"/>
+            <field name="parent_id" ref="hr_expense_ext.exp_viat"/>
             <field name="name">Alimentación</field>
         </record>
         <record id="exp_estiba" model="product.category">
@@ -22,14 +22,6 @@
         <record id="exp_flete" model="product.category">
             <field name="name">Flete</field>
         </record>
-
-
-        <!-- <record id="cat_fuel_gasoline" model="product.category">
-            <field name="parent_id" ref="cat_fuel"/>
-            <field name="name">Gasoline</field>
-        </record>
- -->
-
 
     </data>
 </odoo>

@@ -18,7 +18,8 @@ Module to extend Hr Expense Module
 
     # always loaded
     "data": [
-         "views/hr_expense_views.xml"
+        "views/hr_expense_views.xml",
+        "data/expenses_data.xml",
     ],
     'license':"LGPL-3",
 }
