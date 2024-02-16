@@ -8,7 +8,6 @@ class HrExpense(models.Model):
         'res.partner',
         string='Partner',
         readonly=False,
-        check_company=True,
         required=True,
         index=True,
         ondelete='restrict',
@@ -16,10 +15,10 @@ class HrExpense(models.Model):
     vehicle_id = fields.Many2one(
         'fleet.vehicle',
         string='Vehicle',
-        check_company=True,
         index=True,
         ondelete='restrict',
     )
+    odometer = fields.Float(string="Odometer")
 
 
     #TODO - Si es pago de combustible habilitar el [CHAPA] automovil
