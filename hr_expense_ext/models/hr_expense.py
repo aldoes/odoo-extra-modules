@@ -19,6 +19,11 @@ class HrExpense(models.Model):
         ondelete='restrict',
     )
     odometer = fields.Float(string="Odometer")
+    product_is_fuel = fields.Boolean(compute='_compute_is_fuel')
+    
+    def _compute_is_fuel(self):
+        #TODO - Verificar si es fuel
+        self.product_is_fuel= False
 
 
     #TODO - Si es pago de combustible habilitar el [CHAPA] automovil

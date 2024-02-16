@@ -6,11 +6,15 @@
         <field name="inherit_id" ref="hr_expense.hr_expense_view_form" />
         <field name="arch" type="xml">            
             <xpath expr='//field[@name="price_unit"][2]' position="before">
-                <field name="vehicle_id" />
-                <field name="odometer"/>
+                <field name="product_is_fuel" invisible="1"/>
+                <field name="vehicle_id" invisible="product_is_fuel" can_create="False"/>
+                <field name="odometer" string="Odómetro(Km)" invisible="product_is_fuel"/>
                 <field name="partner_id" />
             </xpath>
             <field name="tax_ids" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="company_id" position="attributes">
                 <attribute name="invisible">1</attribute>
             </field>
         </field>    
