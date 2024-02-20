@@ -19,6 +19,9 @@
                 <field name="partner_id" 
                     can_create="False" />
             </xpath>
+            <xpath expr='//field[@name="price_unit"][2]' position="attributes">
+                <attribute name="readonly">not product_is_fuel</attribute>
+            </xpath>
             <field name="tax_ids" position="attributes">
                 <attribute name="invisible">1</attribute>
             </field>
@@ -39,9 +42,7 @@
             </div> -->
         </field>
     </record>
-    <record id="hr_expense.hr_expense_actions_my_all" model="ir.actions.act_window">
-        <field name="context">{'search_default_my_expenses': 1, 'default_payment_mode': 'company_account'}</field>
-    </record>
+
 
     <!-- <record id="hr_expense_view_form" model="ir.ui.view">
         <field name="name">hr.expense.view.form</field>
@@ -217,5 +218,8 @@
                 <attribute name="readonly">1</attribute>
             </field> Revisar por tiene permiso de modificacion-->
         </field>
+    </record>
+    <record id="hr_expense.hr_expense_actions_my_all" model="ir.actions.act_window">
+        <field name="context">{'search_default_my_expenses': 1, 'default_payment_mode': 'company_account'}</field>
     </record>
 </odoo>
