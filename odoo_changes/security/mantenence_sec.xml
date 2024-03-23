@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="group_equipment" model="res.groups">
+        <field name="name">Equipment Access</field>
+        <field name="category_id" ref="base.module_category_manufacturing_maintenance"/>
+        <!-- <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/> -->
+        <field name="comment">The user will be able to access equipment.</field>
+    </record>
+    
+    <function model="ir.model.data" name="_update_xmlids">
+        <value model="base" eval="[{
+            'xml_id': 'website_sale.product_1_attribute_3_value_1',
+            'record': obj().env.ref('website_sale.product_1_attribute_3_product_template_attribute_line').product_template_value_ids[0],
+            'noupdate': True,
+        }]"/>
+    </function>
+
+
+</odoo>
